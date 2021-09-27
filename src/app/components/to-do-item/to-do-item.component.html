@@ -1,0 +1,9 @@
+<div class="my-3">
+    <h5 [ngClass] = "{'strike' : !todo.active}">{{todo?.title}}</h5>
+    <p [ngClass] = "{'strike' : !todo.active}">{{todo?.desc}}</p>
+    <button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+    <div>
+        <input type="checkbox" class="todo-check-input" id="todoCheck{{todo.sno}}" (click)="onCheckBoxClick(todo)" [checked]="!todo.active" />
+        <label class="toggle-check" for="todoCheck{{todo.sno}}">Done</label>
+    </div>
+</div>
